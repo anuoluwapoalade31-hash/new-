@@ -1,0 +1,923 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alade Israel Anuoluwapo's portfolio in digital marketing, social media management, affiliate marketing, data analysis and youth leadership.">
+  <title>Alade Israel Anuoluwapo | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ink: #14213d;
+      --purple: #6d28d9;
+      --pink: #db2777;
+      --teal: #0f766e;
+      --orange: #f97316;
+      --muted: #64748b;
+      --paper: #f8fafc;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    h1, h2, h3, .brand {
+      font-family: 'Space Grotesk', sans-serif;
+      line-height: 1.2;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    header {
+      background: #ffffffed;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #e2e8f0;
+      backdrop-filter: blur(12px);
+    }
+
+    nav {
+      min-height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .brand span {
+      color: var(--purple);
+    }
+
+    .navlinks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: .88rem;
+      font-weight: 700;
+    }
+
+    .navlinks a:hover {
+      color: var(--pink);
+    }
+
+    .menu-button {
+      display: none;
+      border: 0;
+      background: var(--purple);
+      color: white;
+      padding: 10px 14px;
+      border-radius: 10px;
+    }
+
+    .hero {
+      padding: 90px 0;
+      background: linear-gradient(125deg, #ede9fe, #fce7f3, #ccfbf1);
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--purple);
+      font-weight: 700;
+      font-size: .85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      font-size: clamp(2.7rem, 6vw, 4.8rem);
+      letter-spacing: -3px;
+      margin: 18px 0;
+    }
+
+    .gradient {
+      background: linear-gradient(90deg, var(--purple), var(--pink), var(--teal));
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+
+    .hero p {
+      color: #475569;
+      font-size: 1.05rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--ink);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+    }
+
+    .button.primary {
+      background: linear-gradient(100deg, var(--purple), var(--pink));
+    }
+
+    .profile-card {
+      padding: 25px;
+      border-radius: 25px;
+      background: #ffffffb8;
+      border: 1px solid white;
+      box-shadow: 0 20px 50px #6d28d922;
+    }
+
+    .avatar {
+      min-height: 200px;
+      display: grid;
+      place-items: center;
+      border-radius: 20px;
+      background: linear-gradient(135deg, var(--purple), var(--pink), var(--teal));
+      color: white;
+      font-size: 4rem;
+      font-weight: 700;
+    }
+
+    .profile-card h3 {
+      margin: 20px 0 8px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    .tag {
+      background: white;
+      color: var(--purple);
+      border-radius: 20px;
+      padding: 6px 10px;
+      font-size: .8rem;
+      font-weight: 700;
+    }
+
+    section {
+      padding: 75px 0;
+    }
+
+    .section-heading {
+      margin-bottom: 30px;
+    }
+
+    .section-heading small {
+      color: var(--purple);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-top: 8px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .panel {
+      padding: 28px;
+      border-radius: 22px;
+      background: white;
+      border: 1px solid #e2e8f0;
+    }
+
+    .panel p {
+      margin-bottom: 14px;
+      color: #475569;
+    }
+
+    .highlight {
+      background: linear-gradient(135deg, #312e81, var(--purple), var(--pink));
+      color: white;
+      border: 0;
+    }
+
+    .highlight p {
+      color: #f3e8ff;
+    }
+
+    .skills-section {
+      background: white;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: .2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px #14213d12;
+    }
+
+    .skill-card {
+      padding: 24px;
+      background: linear-gradient(145deg, #fff, #f8fafc);
+    }
+
+    .icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: .93rem;
+    }
+
+    .project-banner {
+      padding: 35px 22px;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--purple), var(--pink));
+    }
+
+    .banner-teal {
+      background: linear-gradient(135deg, var(--teal), #14b8a6);
+    }
+
+    .banner-orange {
+      background: linear-gradient(135deg, var(--orange), var(--pink));
+    }
+
+    .project-body {
+      padding: 23px;
+    }
+
+    .project-body p {
+      margin-bottom: 15px;
+    }
+
+    .text-link {
+      color: var(--purple);
+      font-weight: 700;
+    }
+
+    .leadership-section {
+      background: linear-gradient(120deg, #fdf2f8, #eef2ff, #ecfeff);
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .timeline-item {
+      background: #ffffffdd;
+      border-radius: 20px;
+      padding: 25px;
+      border: 1px solid white;
+    }
+
+    .timeline-item h3 {
+      margin: 10px 0;
+    }
+
+    .timeline-item p {
+      color: #475569;
+    }
+
+    .label {
+      color: var(--purple);
+      font-size: .8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .impact-photo {
+      display: block;
+      width: 100%;
+      max-height: 700px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .photo-caption {
+      padding: 25px;
+    }
+
+    .contact-box {
+      padding: 45px;
+      border-radius: 28px;
+      background: linear-gradient(115deg, #312e81, var(--purple), var(--pink));
+      color: white;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .contact-box p {
+      color: #f3e8ff;
+      margin-top: 10px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .contact-links .button {
+      background: white;
+      color: var(--purple);
+    }
+
+    .contact-links a:not(.button) {
+      text-decoration: underline;
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      padding: 25px 0;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .footer-inner {
+      border-top: 1px solid #e2e8f0;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    @media (max-width: 850px) {
+      .hero-grid, .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .menu-button {
+        display: block;
+      }
+
+      nav {
+        position: relative;
+      }
+
+      .navlinks {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        background: white;
+        flex-direction: column;
+        box-shadow: 0 10px 20px #14213d12;
+      }
+
+      .navlinks.open {
+        display: flex;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid, .timeline {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 60px 0;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .contact-box {
+        padding: 28px;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a class="brand" href="#home">ISRAEL<span>.</span></a>
+
+      <button class="menu-button" id="menuButton" aria-label="Toggle navigation">
+        ☰ Menu
+      </button>
+
+      <div class="navlinks" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#work">Portfolio</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#social-impact">Social Impact</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Digital creativity meets community impact</span>
+
+        <h1>Ideas into <span class="gradient">impact.</span><br>
+          People into possibility.</h1>
+
+        <p>
+          I'm <strong>Alade Israel Anuoluwapo</strong>, a Food Technology
+          graduate, digital marketer, affiliate marketer, social media manager,
+          digital creative, aspiring data analyst, and youth leader.
+          I enjoy using creativity, communication, technology, and collaboration
+          to create meaningful impact.
+        </p>
+
+        <div class="buttons">
+          <a class="button primary" href="#work">Explore My Work ↗</a>
+          <a class="button" href="#contact">Contact Me</a>
+        </div>
+
+        <div class="tags">
+          <span class="tag">Digital Marketing</span>
+          <span class="tag">Social Media</span>
+          <span class="tag">Affiliate Marketing</span>
+          <span class="tag">Data Analysis</span>
+        </div>
+      </div>
+
+      <aside class="profile-card">
+        <div class="avatar">IA</div>
+        <h3>Creative. Analytical. Community-minded.</h3>
+        <p>
+          Connecting digital communication, marketing, leadership,
+          and technology to help ideas reach people.
+        </p>
+        <div class="tags">
+          <span class="tag">Content Creation</span>
+          <span class="tag">Leadership</span>
+          <span class="tag">Web Design</span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-heading">
+        <small>About me</small>
+        <h2>A multidisciplinary digital professional.</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="panel">
+          <p>
+            I am a graduate of Food Technology from Federal Polytechnic,
+            Ilaro, with interests spanning digital marketing, social media
+            management, affiliate marketing, digital content creation,
+            web design, and data analysis.
+          </p>
+          <p>
+            My experience in student leadership and volunteering has helped
+            me develop communication, coordination, presentation, and
+            teamwork skills.
+          </p>
+          <p>
+            I am interested in opportunities where creativity, digital
+            communication, analytical thinking, and community engagement
+            can support meaningful results.
+          </p>
+        </div>
+
+        <div class="panel highlight">
+          <h3>What I bring</h3>
+          <p>✦ Creative thinking and visual communication</p>
+          <p>✦ Digital promotion and audience engagement</p>
+          <p>✦ Social media content and community support</p>
+          <p>✦ Research, organization, and analytical thinking</p>
+          <p>✦ Youth leadership and project collaboration</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <div class="section-heading">
+        <small>My toolkit</small>
+        <h2>Skills and services.</h2>
+        <p>Areas in which I have experience or am developing practical skills.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card skill-card">
+          <div class="icon">📣</div>
+          <h3>Digital Marketing</h3>
+          <p>
+            Digital promotion, campaign messaging, brand visibility,
+            promotional content, and audience-focused communication.
+          </p>
+        </article>
+
+        <article class="card skill-card">
+          <div class="icon">📱</div>
+          <h3>Social Media Management</h3>
+          <p>
+            Content planning, social media communication, community
+            engagement, and helping brands maintain an online presence.
+          </p>
+        </article>
+
+        <article class="card skill-card">
+          <div class="icon">🔗</div>
+          <h3>Affiliate Marketing</h3>
+          <p>
+            Product promotion, affiliate content, calls to action,
+            audience targeting, and lead-generation strategies.
+          </p>
+        </article>
+
+        <article class="card skill-card">
+          <div class="icon">🎨</div>
+          <h3>Graphic Design & Content</h3>
+          <p>
+            Promotional flyers, event posters, certificates, campaign
+            graphics, digital announcements, and visual storytelling.
+          </p>
+        </article>
+
+        <article class="card skill-card">
+          <div class="icon">📊</div>
+          <h3>Data Analysis</h3>
+          <p>
+            Working with Excel, SQL, and SPSS to organize information,
+            explore data, and support evidence-based decisions.
+          </p>
+        </article>
+
+        <article class="card skill-card">
+          <div class="icon">💻</div>
+          <h3>Web Design</h3>
+          <p>
+            Building responsive web pages with HTML and CSS and learning
+            to publish and maintain websites.
+          </p>
+        </article>
+
+        <article class="card skill-card">
+          <div class="icon">✍️</div>
+          <h3>Writing & Communication</h3>
+          <p>
+            Preparing announcements, promotional copy, official messages,
+            presentations, and audience-focused content.
+          </p>
+        </article>
+
+        <article class="card skill-card">
+          <div class="icon">🧑🏽‍🏫</div>
+          <h3>Training & Presentations</h3>
+          <p>
+            Preparing learning materials, delivering presentations,
+            and communicating ideas clearly to an audience.
+          </p>
+        </article>
+
+        <article class="card skill-card">
+          <div class="icon">🌍</div>
+          <h3>Youth Leadership</h3>
+          <p>
+            Student engagement, volunteer coordination, event support,
+            teamwork, and community-focused initiatives.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="container">
+      <div class="section-heading">
+        <small>Selected work</small>
+        <h2>Projects, campaigns & ideas.</h2>
+        <p>
+          Add your real designs, campaign links, screenshots, and
+          project results here as you build your portfolio.
+        </p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <div class="project-banner">Digital Campaigns</div>
+          <div class="project-body">
+            <h3>Campaign & Event Visuals</h3>
+            <p>
+              Promotional graphics, event flyers, certificates,
+              and digital announcements for community or student activities.
+            </p>
+            <a class="text-link"
+               href="mailto:anuoluwapoalade31@gmail.com?subject=Digital%20campaign%20samples">
+              Request samples ↗
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="project-banner banner-teal">Social Media</div>
+          <div class="project-body">
+            <h3>Social Media & Brand Promotion</h3>
+            <p>
+              Social media content, audience engagement, digital promotion,
+              and online brand communication.
+            </p>
+            <a class="text-link" href="#contact">Discuss a project ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="project-banner banner-orange">Affiliate Marketing</div>
+          <div class="project-body">
+            <h3>Affiliate Content</h3>
+            <p>
+              Product-focused content and promotional messaging designed
+              to introduce offers and encourage audience action.
+            </p>
+            <a class="text-link" href="#contact">Contact me ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="project-banner banner-teal">Youth & Community</div>
+          <div class="project-body">
+            <h3>Youth Engagement Initiatives</h3>
+            <p>
+              Student activities and community initiatives focused
+              on participation, collaboration, and positive impact.
+            </p>
+            <a class="text-link" href="#social-impact">View social impact ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="project-banner">Data & Insights</div>
+          <div class="project-body">
+            <h3>Data Analysis Practice</h3>
+            <p>
+              Analysis and reporting practice using Excel, SQL, or SPSS.
+              Add your actual project and findings when available.
+            </p>
+            <a class="text-link" href="https://github.com/" target="_blank" rel="noopener">
+              GitHub ↗
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="project-banner banner-orange">Food Technology</div>
+          <div class="project-body">
+            <h3>Food Science & Technology</h3>
+            <p>
+              Academic and practical interests in food processing,
+              product development, food quality, and research.
+            </p>
+            <a class="text-link"
+               href="mailto:anuoluwapoalade31@gmail.com?subject=Food%20technology%20project">
+              Ask about my work ↗
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="leadership-section" id="leadership">
+    <div class="container">
+      <div class="section-heading">
+        <small>Leadership & experience</small>
+        <h2>Working with people to make things happen.</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item">
+          <span class="label">Student Leadership</span>
+          <h3>President — NAFSTS, Federal Polytechnic Ilaro Chapter</h3>
+          <p>
+            Supported student engagement, executive coordination,
+            communication, and departmental initiatives within the
+            National Association of Food Science and Technology Students.
+          </p>
+        </article>
+
+        <article class="timeline-item">
+          <span class="label">Volunteering & Administration</span>
+          <h3>Volunteer / Personal Assistant — Global Kingdom Harvest Institute</h3>
+          <p>
+            Supported organizational activities, communication,
+            coordination, and administrative tasks.
+          </p>
+        </article>
+
+        <article class="timeline-item">
+          <span class="label">Project Coordination</span>
+          <h3>Dual-Powered Dehydrator Initiative</h3>
+          <p>
+            Contributed to student and departmental efforts involving
+            a dehydrator powered by electricity and gas to support
+            food-processing practice and sample drying.
+          </p>
+        </article>
+
+        <article class="timeline-item">
+          <span class="label">Digital Professional Development</span>
+          <h3>Marketing, Content & Technology</h3>
+          <p>
+            Developing and applying skills in digital promotion,
+            social media, affiliate marketing, content creation,
+            web publishing, and data analysis.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="leadership-section" id="social-impact">
+    <div class="container">
+      <div class="section-heading">
+        <small>Social impact</small>
+        <h2>Leadership in action.</h2>
+        <p>
+          Student engagement, public speaking, knowledge sharing,
+          and community learning at Federal Polytechnic Ilaro.
+        </p>
+      </div>
+
+      <article class="card">
+        <!-- Keep the photo in the assets folder with this exact filename. -->
+        <a href="assets/social-impact-classroom.png" target="_blank" rel="noopener">
+          <img
+            class="impact-photo"
+            src="assets/social-impact-classroom.png"
+            alt="A classroom filled with students listening to a speaker during a NAFSTS event at Federal Polytechnic Ilaro"
+            loading="lazy">
+        </a>
+
+        <div class="photo-caption">
+          <h3>Student Engagement & Public Speaking</h3>
+          <p>
+            A classroom audience during a student-focused event.
+            This photograph illustrates public speaking, youth engagement,
+            leadership, and the importance of bringing people together
+            around learning and shared goals.
+          </p>
+          <div class="tags">
+            <span class="tag">Social Impact</span>
+            <span class="tag">Youth Leadership</span>
+            <span class="tag">Communication</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <div>
+          <span class="eyebrow" style="color:#fbcfe8">Let's connect</span>
+          <h2>Let's create something useful.</h2>
+          <p>
+            Open to opportunities and collaborations in digital marketing,
+            social media management, affiliate marketing, content creation,
+            youth engagement, web design, and data-related work.
+          </p>
+        </div>
+
+        <div class="contact-links">
+          <a class="button"
+             href="mailto:anuoluwapoalade31@gmail.com?subject=Portfolio%20enquiry">
+            ✉ Email me
+          </a>
+
+          <a href="mailto:anuoluwapoalade31@gmail.com">
+            anuoluwapoalade31@gmail.com
+          </a>
+
+          <a href="tel:+2348087359821">
+            ☎ +234 808 735 9821
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Alade Israel Anuoluwapo</span>
+    <span>Built with HTML, CSS & JavaScript</span>
+    <a href="#home">Back to top ↑</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const menuButton = document.getElementById("menuButton");
+  const navLinks = document.getElementById("navLinks");
+
+  menuButton.addEventListener("click", function () {
+    navLinks.classList.toggle("open");
+  });
+
+  navLinks.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+      navLinks.classList.remove("open");
+    });
+  });
+</script>
+</body>
+</html>
